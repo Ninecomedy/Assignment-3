@@ -1,237 +1,43 @@
-h1 {
-    color: aliceblue;
-    background-color: rgb(58, 42, 18);
-    font-size: 80px;
-    text-align: center;
-}
-
-h2 {
-    color: rgb(5, 5, 5);
-    font-size: 24px;
-    text-align: left;
-}
-
-h3 {
-    color: rgb(5, 5, 5);
-    font-size: 20px;
-    text-align: left;
-}
-
-body {
-    color: rgb(5, 5, 5);
-    font-size: 16px;
-    text-align: left;
-    background-color: #fff0e6;
-}
-
-/* =========================
-   FOOD IMAGE
-   ========================= */
-
-.food_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-.food_pic {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 20px;
-    background-color: #ffffff;
-    display: block;
-    margin: 0;
-}
-
-.ingre_pic {
-    width: 500px;
-    height: 500px;
-    object-fit: scale-down;
-    border-radius: 20px;
-    background-color: rgba(255, 239, 219, 0.85);
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* จัด div ทั่วไปให้อยู่ตรงกลาง */
-div {
-    text-align: center;
-}
-
-
-/* =========================
-   GLOBAL TRANSITION
-   ========================= */
-
-a,
-button,
-img,
-div,
-.div_display,
-.flex_container>div,
-.table_Border tr,
-.valign-card {
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-
-/* =========================
-   FOOD IMAGE HOVER
-   ========================= */
-
-.food_pic:hover {
-    transform: scale(1.1);
-    filter: drop-shadow(0 8px 16px rgba(49, 130, 206, 0.35));
-}
-
-.ingre_pic:hover {
-    transform: scale(1.1);
-    filter: drop-shadow(0 8px 16px rgba(49, 130, 206, 0.35));
-}
-
-
-
-/* =========================
-    CARD HOVER
-   ========================= */
-
-.div_display:hover,
-.flex_container>div:hover,
-.valign-card:hover {
-    transform: translateY(-4px);
-
-    box-shadow:
-        0 8px 18px rgba(49, 130, 206, 0.12);
-
-    border-color: #3182ce;
-}
-
-
-/* =========================
-   TABLE ROW HOVER
-   ========================= */
-
-.table_Border tr:hover td {
-    background-color: #664e33;
-    color: #2b6cb0;
-}
-
-
-/* =========================
-   BUTTON / LINK HOVER
-   ========================= */
-
-div a:hover {
-    background-color: #2b6cb0;
-
-    box-shadow:
-        0 6px 12px rgba(43, 108, 176, 0.3);
-
-    transform: translateY(-2px);
-
-    color: #e53e3e;
-
-    text-decoration: underline;
-}
-
-
-/* =========================
-   BUTTON / LINK ACTIVE
-   ========================= */
-
-div a:active {
-    transform: translateY(1px) scale(0.97);
-
-    box-shadow:
-        0 2px 4px rgba(43, 108, 176, 0.2);
-
-    color: #ffcba9;
-}
-
-
-/* =========================
-   LOGO
-   ========================= */
-
-header img,
-.logo-img {
-    animation: logoPulse 4s infinite ease-in-out;
-}
-
-
-/* =========================
-   CARD LAYOUT
-   ========================= */
-
-.card-layout {
-    background: rgba(255, 239, 219, 0.85);
-
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-
-    border-radius: 24px;
-
-    padding: 30px;
-
-    box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.05);
-
-    border: 1px solid rgba(255, 255, 255, 0.5);
-
-    max-width: 500px;
-
-    margin: auto;
-
-    width: 90%;
-}
-
-
-/* =========================
-   CARD POSITION
-   ========================= */
-
-.card-layout-position {
-    background: rgba(255, 255, 255, 0.85);
-
-    border-radius: 24px;
-
-    padding: 30px;
-
-    box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.05);
-
-    border: 1px solid rgba(255, 255, 255, 0.5);
-
-    max-width: 800px;
-
-    margin: 20px auto;
-
-    width: 90%;
-}
-
-
-/* =========================
-   MOBILE RESPONSIVE
-   ========================= */
-
-@media (max-width: 600px) {
-
-    h1 {
-        font-size: 50px;
-    }
-
-    .food_container {
-        gap: 15px;
-    }
-
-    .food_pic {
-        width: 110px;
-        height: 110px;
-    }
-
-}
+/* Warm editorial recipe layout. No external fonts or dependencies required. */
+:root{--paper:#faf8f2;--ink:#243e32;--muted:#65695e;--line:#dcded1;--green:#284f3a;--sage:#eef0e5;--accent:#a85b36}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:30px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.7}
+a{color:inherit;text-underline-offset:4px}
+button,input{font:inherit}
+button,a,input{-webkit-tap-highlight-color:transparent}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:5px}
+img{display:block;width:100%;height:auto}
+figure,p,h1,h2,h3{margin:0}
+.wrap{max-width:1220px;margin-inline:auto;padding-inline:40px}
+.announcement{text-align:center;background:var(--green);color:#f6f2e8;font-size:11px;letter-spacing:1.2px;padding:9px 16px}
+.site-header{display:flex;align-items:center;justify-content:space-between;padding-block:25px;border-bottom:1px solid var(--line);gap:25px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font:26px/1 Georgia,serif;letter-spacing:-1px}
+.brand-mark{font-size:48px;font-family:Georgia,serif;line-height:1;color:var(--accent)}
+.brand-bottom{display:block;font:10px/1.8 Arial,sans-serif;letter-spacing:6px;margin-top:5px;text-align:center}
+nav{display:flex;gap:34px;font-size:12px;font-weight:600}nav a{text-decoration:none}nav a:hover{color:var(--accent)}
+.breadcrumb{display:flex;flex-wrap:wrap;gap:12px;font-size:11px;color:var(--muted);padding-block:25px}.breadcrumb a{text-decoration:none}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding:5px 0 46px}
+.eyebrow{font-size:10px;font-weight:700;letter-spacing:2px;line-height:1.5;color:var(--accent);margin-bottom:19px}
+.hero .eyebrow{display:flex;align-items:center;gap:9px}.eyebrow span{height:6px;width:6px;border-radius:50%;background:var(--accent)}
+h1{font:normal clamp(40px,4.6vw,64px)/1.07 Georgia,'Times New Roman',serif;letter-spacing:-2.5px;max-width:520px}h1 em{font-weight:normal;color:#6b7955}
+.intro{max-width:415px;color:var(--muted);font-size:14px;line-height:1.85;margin-top:25px}
+.hero-actions{display:flex;gap:25px;align-items:center;flex-wrap:wrap;margin:29px 0 32px}
+.button{display:inline-flex;align-items:center;gap:30px;padding:13px 21px;background:var(--green);color:white;text-decoration:none;font-size:12px;border-radius:3px;transition:background .2s}.button:hover{background:#426149}
+.print-button{display:flex;align-items:center;gap:9px;border:0;background:transparent;color:var(--ink);font-size:12px;cursor:pointer;padding:10px 0}.print-button:hover{text-decoration:underline}
+.recipe-facts{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);padding-top:22px;margin:0;max-width:460px}.recipe-facts div+div{border-left:1px solid var(--line);padding-left:22px}.recipe-facts dt{font-size:9px;letter-spacing:1.2px;color:var(--muted)}.recipe-facts dd{margin:5px 0 0;font:24px Georgia,serif;white-space:nowrap}.recipe-facts small{font:12px Arial,sans-serif}
+.hero-image{position:relative}.hero-image>img{height:520px;object-fit:cover;border-radius:140px 6px 6px 6px}.hero-image figcaption{position:absolute;bottom:18px;left:18px;background:var(--paper);padding:11px 16px;font:italic 16px Georgia,serif;border-radius:2px}.hero-image figcaption span{margin-right:9px;color:var(--accent)}
+.section-rule{display:flex;align-items:center;justify-content:space-between;border-block:1px solid var(--line);padding:18px 0;margin-bottom:47px;gap:20px}.section-rule span:first-child{font:italic 20px Georgia,serif}.section-rule span:last-child{font-size:9px;letter-spacing:1.7px;color:var(--muted)}
+.recipe-layout{display:grid;grid-template-columns:350px minmax(0,1fr);gap:65px;align-items:start}
+h2{font:normal 32px/1.2 Georgia,serif;letter-spacing:-.8px}.section-intro{font-size:12px;color:var(--muted);margin-top:13px}.ingredients{background:var(--sage);padding:29px;border:1px solid #e0e4d5;border-radius:5px}.ingredients h2{font-size:30px}.ingredients .eyebrow,.method .eyebrow{margin-bottom:12px}.check-status{font-size:10px;color:var(--green);border-block:1px solid #d5daca;padding:10px 0;margin:20px 0 4px}
+.ingredient-list{list-style:none;margin:0;padding:0}.ingredient-list li{border-bottom:1px solid #d9dece}.ingredient-list label{display:flex;align-items:flex-start;gap:11px;padding:12px 0;cursor:pointer;font-size:12px;line-height:1.8}.ingredient-list input{margin:5px 0 0;width:15px;height:15px;flex-shrink:0;accent-color:var(--green);cursor:pointer}.ingredient-list input:checked+span{text-decoration:line-through;color:#737968}.ingredient-photo{margin-top:22px}.ingredient-photo img{border-radius:3px}.ingredient-photo figcaption,.process-photo figcaption,.gallery figcaption{font:italic 13px/1.6 Georgia,serif;color:var(--muted);margin-top:10px}.quantity-note{font-size:11px;margin-top:18px;color:var(--muted)}
+.method{padding-top:5px}.step-list{padding:0;list-style:none;counter-reset:steps;margin:26px 0}.step-list>li{counter-increment:steps;display:flex;gap:19px;border-bottom:1px solid var(--line);padding:23px 0}.step-list>li:first-child{padding-top:0}.step-list>li:before{content:counter(steps,decimal-leading-zero);font:22px Georgia,serif;color:#7d896c;min-width:32px;line-height:1.3}.step-list h3{font:normal 21px/1.3 Georgia,serif;margin-bottom:8px}.step-list p{font-size:13px;color:var(--muted);line-height:1.85}.process-photo{margin-top:28px}.process-photo img{border-radius:4px}
+.kitchen-note{margin-top:55px;display:flex;gap:27px;background:#eee8db;padding:30px 38px;border-radius:5px}.note-mark{font:54px Georgia,serif;color:var(--accent)}.kitchen-note .eyebrow{margin-bottom:9px}.kitchen-note h2{font-size:27px}.kitchen-note p:last-child{font-size:13px;color:var(--muted);margin-top:10px;max-width:800px}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-block:38px 55px}.gallery img{height:300px;object-fit:cover;border-radius:4px}.gallery figure:first-child img{object-position:center 52%}
+.site-footer{border-top:1px solid var(--line);padding-block:30px 38px;display:flex;justify-content:space-between;align-items:center;gap:30px}.footer-brand{font:24px Georgia,serif;text-decoration:none}.site-footer p{font-size:11px;color:var(--muted);margin-top:6px}.back-top{font-size:11px;white-space:nowrap}
+.skip-link{position:absolute;top:-100px;left:15px;padding:10px;background:var(--green);color:white;z-index:10}.skip-link:focus{top:15px}
+@media(min-width:1500px){.hero-image>img{height:550px}}
+@media(max-width:1000px){.hero{gap:30px}.wrap{padding-inline:28px}.recipe-layout{grid-template-columns:300px minmax(0,1fr);gap:35px}.hero-image>img{height:480px}.hero-actions{gap:16px}.recipe-facts div+div{padding-left:12px}.recipe-facts dd{font-size:21px}nav{gap:20px}}
+@media(max-width:760px){.wrap{padding-inline:22px}.site-header{flex-direction:column;align-items:flex-start;gap:20px;padding-block:22px}nav{width:100%;justify-content:space-between;gap:12px;font-size:11px}.breadcrumb{padding-block:21px;font-size:10px;gap:8px}.hero{grid-template-columns:1fr;gap:30px;padding-bottom:30px}h1{font-size:clamp(42px,8.5vw,60px);letter-spacing:-1.8px}.intro{max-width:none}.hero-image>img{height:430px;border-top-left-radius:110px;object-position:center 52%}.hero-actions{margin-block:24px}.recipe-facts{max-width:none}.section-rule{margin-bottom:30px}.section-rule span:last-child{display:none}.recipe-layout{grid-template-columns:1fr;gap:35px}.ingredients{padding:25px}.ingredient-photo img{max-height:350px;object-fit:contain;background:white}.ingredient-list label{font-size:13px}.method{padding-inline:3px}.step-list p{font-size:14px}.kitchen-note{padding:25px 22px;gap:16px;margin-top:35px}.note-mark{font-size:32px}.kitchen-note h2{font-size:25px}.gallery{gap:20px;grid-template-columns:1fr;margin-block:30px}.gallery img{height:320px}.site-footer{align-items:flex-start;flex-direction:column;gap:18px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{body{background:white;color:#000;font-size:11pt}.announcement,.site-header,.breadcrumb,.hero-image,.hero-actions,.section-rule,.ingredient-photo,.process-photo,.gallery,.back-top,.skip-link{display:none}.wrap{max-width:none;padding:0}.hero{display:block;padding-bottom:20px}h1{font-size:30pt;max-width:none}.intro{max-width:none}.recipe-facts{max-width:none}.recipe-layout{display:block}.ingredients{background:none;border:1px solid #aaa;margin-bottom:24px;padding:16px}.ingredient-list label{padding:5px 0}.check-status{display:none}.step-list>li{break-inside:avoid;padding:12px 0}.kitchen-note{break-inside:avoid;background:none;border:1px solid #aaa;margin-top:22px}.site-footer{margin-top:20px}a{color:#000}h2,h3{break-after:avoid}}
